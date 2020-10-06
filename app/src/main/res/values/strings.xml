@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TriangularShadeImageView</string>
+    <string name="impressionism">IMPRESSIONISM</string>
+    <string name="i_am_going_to_see">I am going to see this in couple of weeks. I can\'t wait now.</string>
+    <string name="brighton_fernando">Brighton Fernando</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat…<b>Read More</b></string>
+    <string name="buy_ticket">Buy Ticket</string>
+</resources>

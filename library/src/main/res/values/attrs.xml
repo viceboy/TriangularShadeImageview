@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TriangularShadeImageView">
+        <attr name="firstTriangleSize" format="dimension" />
+        <attr name="secondTriangleSize" format="dimension" />
+        <attr name="thirdTriangleSize" format="dimension" />
+        <attr name="firstTriangleAnimDelay" format="integer"/>
+        <attr name="secondTriangleAnimDelay" format="integer"/>
+        <attr name="thirdTriangleAnimDelay" format="integer"/>
+        <attr name="firstTriangleAnimDuration" format="integer"/>
+        <attr name="secondTriangleAnimDuration" format="integer"/>
+        <attr name="thirdTriangleAnimDuration" format="integer"/>
+        <attr name="startPtForAnimFirstTriangle" format="integer"/>
+        <attr name="startPtForAnimSecondTriangle" format="integer"/>
+        <attr name="startPtForAnimThirdTriangle" format="integer"/>
+
+        <attr name="firstTriangleDrawDir" format="enum">
+            <enum name="TOP_LEFT" value="0" />
+            <enum name="TOP_RIGHT" value="1" />
+            <enum name="BOTTOM_LEFT" value="2" />
+            <enum name="BOTTOM_RIGHT" value="3" />
+        </attr>
+        <attr name="secondTriangleDrawDir" format="enum">
+            <enum name="TOP_LEFT" value="0" />
+            <enum name="TOP_RIGHT" value="1" />
+            <enum name="BOTTOM_LEFT" value="2" />
+            <enum name="BOTTOM_RIGHT" value="3" />
+        </attr>
+        <attr name="thirdTriangleDrawDir" format="enum">
+            <enum name="TOP_LEFT" value="0" />
+            <enum name="TOP_RIGHT" value="1" />
+            <enum name="BOTTOM_LEFT" value="2" />
+            <enum name="BOTTOM_RIGHT" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>
