@@ -2,6 +2,7 @@ package com.viceboy.triangularshadeimageview
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_details.*
 
 
@@ -25,7 +26,7 @@ class DetailsActivity : AppCompatActivity() {
 
         tvToolbar?.text = mTitle
         ivDetails?.setImageResource(mImageSrc)
-        ivDetails?.shadeColor = mColorTint
+        ivDetails?.shadeColor = ContextCompat.getColor(this,mColorTint)
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {

@@ -1,6 +1,7 @@
 package com.viceboy.triangularshadeimageview
 
 import android.content.Intent
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -38,7 +39,7 @@ class SampleAdapter(
 
         fun bind(model: SampleModel) {
             shadedImageView.setImageDrawable(itemView.context.getDrawable(model.imgSrc))
-            shadedImageView.shadeColor = model.color
+            shadedImageView.shadeColor = ContextCompat.getColor(itemView.context,model.color)
             headerTextView.text = model.header
 
             if (index == adapterPosition) {

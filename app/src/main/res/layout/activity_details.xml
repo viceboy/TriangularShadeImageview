@@ -70,6 +70,7 @@
         app:thirdTriangleAnimDuration="150"
         app:thirdTriangleDrawDir="BOTTOM_RIGHT"
         app:thirdTriangleSize="84dp"
+        app:shadeColor="@color/lightBlue"
         tools:src="@drawable/nature_blue_img" />
 
     <TextView

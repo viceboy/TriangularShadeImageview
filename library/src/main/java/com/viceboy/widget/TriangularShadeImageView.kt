@@ -2,12 +2,12 @@ package com.viceboy.widget
 
 import android.animation.AnimatorSet
 import android.animation.ValueAnimator
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
-import android.support.v4.content.ContextCompat
 import android.support.v4.graphics.ColorUtils
 import android.support.v7.widget.AppCompatImageView
 import android.util.AttributeSet
@@ -55,7 +55,6 @@ class TriangularShadeImageView : AppCompatImageView {
         set(value) {
             if (field != value) {
                 listOfColors.clear()
-                val color = ContextCompat.getColor(context, value)
                 var alpha = initialColorAlpha
                 val tempLists = listOf(
                     mThirdTriangleVerticesList,
@@ -65,7 +64,7 @@ class TriangularShadeImageView : AppCompatImageView {
                 tempLists.forEach { _ ->
                     listOfColors.add(
                         ColorUtils.setAlphaComponent(
-                            color,
+                            value,
                             alpha
                         )
                     )
@@ -136,6 +135,7 @@ class TriangularShadeImageView : AppCompatImageView {
     /**
      * Init all the required attributes
      */
+    @SuppressLint("ResourceAsColor")
     private fun retrieveAttributes(typedArray: TypedArray) {
         mFirstTriangleLength =
             typedArray.getDimension(R.styleable.TriangularShadeImageView_firstTriangleSize, 0f)
@@ -177,6 +177,8 @@ class TriangularShadeImageView : AppCompatImageView {
             R.styleable.TriangularShadeImageView_thirdTriangleDrawDir,
             LayoutDir.TOP_LEFT
         )
+
+        shadeColor = typedArray.getColor(R.styleable.TriangularShadeImageView_shadeColor,android.R.color.holo_orange_light)
     }
 
     /**
@@ -196,9 +198,12 @@ class TriangularShadeImageView : AppCompatImageView {
                     )
             LayoutDir.TOP_RIGHT ->
                 listOf(
-                    width.toFloat(), -height.toFloat(),
-                    triangleLength, -height.toFloat(), width.toFloat(),
-                    triangleLength
+                    width.toFloat(),
+                    initial,
+                    width.toFloat(),
+                    triangleLength,
+                    width-triangleLength,
+                    initial
                 )
 
             LayoutDir.BOTTOM_LEFT ->

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="TriangularShadeImageView">
+        <attr name="shadeColor" format="color"/>
         <attr name="firstTriangleSize" format="dimension" />
         <attr name="secondTriangleSize" format="dimension" />
         <attr name="thirdTriangleSize" format="dimension" />
